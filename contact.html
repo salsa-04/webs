@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bahasa Pemograman</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .container {
+        max-width: 800px;
+        margin: auto;
+        padding: 2rem;
+        background: white;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      h2 {
+        color: palevioletred;
+        text-align: center;
+      }
+      .contact-info {
+        margin-bottom: 1.5rem;
+        text-align: center;
+      }
+      .contact-info p {
+        margin: 5px 0;
+      }
+      form {
+        margin-top: 1rem;
+      }
+      form input,
+      form textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+      form button {
+        background: palevioletred;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+      }
+      form button:hover {
+        background: #0056b3;
+      }
+      footer {
+        background: #011034;
+        color: white;
+        text-align: center;
+        padding: 1rem;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="menu">
+        <a href="home.html">Home</a>
+        <a href="aboutUS.html">AboutUS</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+    <div class="container">
+      <h2>Hubungi Saya</h2>
+      <div class="contact-info">
+        <p><strong>Alamat Rumah:</strong> balaraja</p>
+        <p><strong>Telepon:</strong> +62 83137600372</p>
+        <p><strong>Email:</strong> salsaputriaulia6@gmail.com</p>
+      </div>
+      <form id="contactForm">
+        <input type="text" name="name" placeholder="Nama Anda" required />
+        <input type="email" name="email" placeholder="Email Anda" required />
+        <textarea
+          name="message"
+          rows="5"
+          placeholder="Pesan anda"
+          required
+        ></textarea>
+        <button type="submit">Kirim</button>
+      </form>
+    </div>
+    <script>
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          alert("Pesan Anda telah dikirim!");
+          this.reset();
+        });
+    </script>
+  </body>
+</html>
